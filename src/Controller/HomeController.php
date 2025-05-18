@@ -14,7 +14,12 @@ class HomeController extends AbstractController
     {
         $form = $this->createFormBuilder()
             ->add('files', DropzoneType::class, [
-                'multiple' => true
+                'multiple' => true,
+                'preview' => [
+                    'style' => 'block',
+                    'can_toggle_placeholder' => true,
+                    'can_open_file_picker' => true,
+                ]
             ])
             ->getForm();
 
